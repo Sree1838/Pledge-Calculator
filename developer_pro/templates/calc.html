@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form action="{% url 'calc' %}" method="POST">
+    {% csrf_token %}
+    <h3 class="position">PLEDGE CALCULATOR</h3>
+    <div class="row3">
+
+        <div class="row5">
+            <input name="sprice" type="text" class="form-control" placeholder="Share Price" value="{{result}}">
+        </div>
+
+        <div class="row7">
+            <input name="nshares" type="text" class="form-control" placeholder="Number of shares">
+        </div>
+        <div class="row6">
+            <button id="mySubmit" type="submit" class="float-left submit-button">Calculate</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% block first %}
+
+{% endblock %}

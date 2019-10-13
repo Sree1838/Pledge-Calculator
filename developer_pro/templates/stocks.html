@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form action="{% url 'calc'%}" method="'POST">
+    <div class="row8">
+        <h3>You have below stocks in your account.<br>Please select a stock to which you want to take pledge.</h3>
+    </div>
+    <div class="row4">
+        <select name="Stock Name">
+            {% for name in stockNames %}
+            <option value="{{name}}">{{name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="row9">
+        <button id="mySubmit" type="submit" class="float-left submit-button">Submit</button>
+    </div>
+</form>
+
+{% endblock %}
